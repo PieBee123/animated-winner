@@ -37,3 +37,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your build steps here
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ArtifactRawWorks
+          path: ${{ github.workspace }}/release.txt
